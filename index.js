@@ -46,7 +46,7 @@ Client.on("message", message => {
             }
             else {
                 mention.roles.add("840519457339998208");
-                message.channel.send(mention.displayName + ("a fermé sa gueule :)"));
+                message.channel.send(mention.displayName + (" a fermé sa gueule :)"));
             }
         }
         else if (message.content.startsWith(prefix + "untg")){
@@ -57,7 +57,7 @@ Client.on("message", message => {
             }
             else {
                 mention.roles.remove("840519457339998208");
-                message.channel.send(mention.displayName + ("ne ferme plus sa gueule :D, Gg."));
+                message.channel.send(mention.displayName + (" ne ferme plus sa gueule :D, Gg."));
             }
         }
     }
