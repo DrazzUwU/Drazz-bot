@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 const Client = new Discord.Client;
 
-const prefix = "|";
+const prefix = "-";
 
 Client.on("ready", () => {
     console.log("bot opérationnel");
@@ -12,12 +12,12 @@ Client.on("message", message => {
     if(message.author.bot) return;
     if(message.channel.type == "dm") return;
 
-    //|suicide
+    //-suicide
     if(message.content == prefix + "suicide"){
         message.channel.send("**" + message.author.username + "** s'est suicidé :X , paie à son âme ");
     }
 
-    //|ban
+    //-ban
     if(message.member.hasPermission("ADMINISTRATOR")){
         if(message.content.startsWith(prefix + "ban")){
             let mention = message.mentions.members.first();
@@ -36,7 +36,7 @@ Client.on("message", message => {
             }
         }
     }
-    //|tg / |untg
+    //-tg / -untg
     if(message.member.hasPermission("ADMINISTRATOR")){
         if(message.content.startsWith(prefix + "tg")){
             let mention = message.mentions.members.first();
