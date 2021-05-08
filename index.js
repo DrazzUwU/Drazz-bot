@@ -45,7 +45,7 @@ Client.on("message", message => {
                 message.reply("Il faut mentionner une personne pour faire fermer sa gueule à quelqu'un :^)");
             }
             else {
-                mention.roles.add("840519457339998208");
+                mention.roles.add("753257762145828935");
                 message.channel.send(mention.displayName + (" a fermé sa gueule :)"));
             }
         }
@@ -56,7 +56,7 @@ Client.on("message", message => {
                 message.reply("Il faut mentionner une personne pour ne plus qu'elle se tg :^)");
             }
             else {
-                mention.roles.remove("840519457339998208");
+                mention.roles.remove("753257762145828935");
                 message.channel.send(mention.displayName + (" ne ferme plus sa gueule :D, Gg."));
             }
         }
