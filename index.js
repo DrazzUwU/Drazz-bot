@@ -80,7 +80,7 @@ Client.on("message", message => {
         let mention = message.mentions.members.first();
 
         if(mention == undefined){
-            message.reply("! On ne debite pas le vide voyons '-' --> indice : ||mentionne un quelqu'un|| .)");
+            message.reply("! On ne debite pas le vide voyons '-' --> (indice : ||mentionne une personne|| ).");
         }
         else {
             message.channel.send("**" + message.author.username + "** Débite ses grands morts à **" + mention.displayName + "**");
