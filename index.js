@@ -4,15 +4,15 @@ const Client = new Discord.Client();
 
 const prefix = "~";
 
-Client.on('ready', function () {
-    Client.user.setPresence({
-        game: {
-            name: "~help",
-            type: "STREAMING",
-            url: "https://www.twitch.tv/drazzuuu",
-        }
-    })
+    
+Client.user.setPresence({
+    game: { 
+       name: "~help",
+       type: "STREAMING",
+       url: "https://www.twitch.tv/drazzuuu",
+    }
 })
+
 
 Client.on("message", message => {
     if(message.author.bot) return;
