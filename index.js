@@ -4,6 +4,16 @@ const Client = new Discord.Client();
 
 const prefix = "~";
 
+Client.on("ready", async () =>{    
+    Client.user.setPresence({
+        game: { 
+            name: "~help",
+            type: "STREAMING",
+            url: "https://www.twitch.tv/drazzuuu",
+        }   
+    })
+})
+
 Client.on("message", message => {
     if(message.author.bot) return;
     if(message.channel.type == "dm") return;
