@@ -85,7 +85,7 @@ Client.on("message", message => {
 
     //~suicide
     if(message.content == prefix + "suicide"){
-        message.channel.send("**" + message.author.username + "** s'est suicidé :X , paix à son âme ");
+        message.channel.send("**" + message.author.username + "** s'est suicidé :X , paie à son âme ");
     }    
         
     //~help
@@ -98,21 +98,13 @@ Client.on("message", message => {
             message.reply( ", Voici la liste des commandes pour les __membres__ bgs ^^ : https://docs.google.com/document/d/1a6_a8bAiUe1bhgOhkGYhBvIx0LsP5DOhBvjCZnjxe-k/edit?usp=sharing");
         }
     }
-    
-    //~revive
-    if(message.content == prefix + "revive"){
-        message.channel.send("**" + message.author.username + "** renaît de ses cendres tel un phoenix :fire: ");
-    }    
 
-    Client.on("ready", async () =>{    
-        Client.user.setPresence({
-            game: { 
-                name: "~help",
-                type: "STREAMING",
-                url: "https://www.twitch.tv/drazzuuu",
-            }   
-        })
-    })
+      
+    Client.user.setPresence({ activity: {name: "~help", type: "STREAMING", url: "https://www.twitch.tv/drazzuuu"}
+      
+  
+     })
+    
     
 }); 
 
