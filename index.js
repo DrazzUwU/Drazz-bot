@@ -85,7 +85,7 @@ Client.on("message", message => {
 
     //~suicide
     if(message.content == prefix + "suicide"){
-        message.channel.send("**" + message.author.username + "** s'est suicidé :X , paie à son âme ");
+        message.channel.send("**" + message.author.username + "** s'est suicidé :X , paix à son âme ");
     }    
         
     //~help
