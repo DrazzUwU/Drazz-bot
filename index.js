@@ -19,7 +19,7 @@ Client.on("message", message => {
             else{
                 if(mention.kickable){
                     mention.kick();
-                    message.channel.send("c'est ciao" + mention.displayName);
+                    message.channel.send("c'est ciao __" + mention.displayName + "__");
                 }
                 else{
                     message.reply ("tu ne peux pas virer ce pusher :D");
@@ -38,7 +38,7 @@ Client.on("message", message => {
             else {
                 if(mention.bannable){
                     mention.ban();
-                    message.channel.send(mention.displayName + " gerte d'ici");
+                    message.channel.send("__" + mention.displayName + "__ gerte d'ici");
                 }
                 else{
                     message.reply("tu es dans l'incapabilité de bannir cette personne");
@@ -56,7 +56,7 @@ Client.on("message", message => {
             }
             else {
                 mention.roles.add("753257762145828935");
-                message.channel.send(mention.displayName + " a fermé sa gueule :)");
+                message.channel.send("__" + mention.displayName + "__ a fermé sa gueule :)");
             }
         }
         else if (message.content.startsWith(prefix + "untg")){
@@ -67,7 +67,7 @@ Client.on("message", message => {
             }
             else {
                 mention.roles.remove("753257762145828935");
-                message.channel.send(mention.displayName + " ne ferme plus sa gueule :D, Gg.");
+                message.channel.send("__" + mention.displayName + "__ ne ferme plus sa gueule :D, Gg.");
             }
         }
     }
@@ -85,7 +85,7 @@ Client.on("message", message => {
 
     //~suicide
     if(message.content == prefix + "suicide"){
-        message.channel.send("**" + message.author.username + "** s'est suicidé :X , paix à son âme ");
+        message.channel.send("**" + message.author.username + "** s'est suicidé :X , paie à son âme ");
     }    
         
     //~help
@@ -98,13 +98,9 @@ Client.on("message", message => {
             message.reply( ", Voici la liste des commandes pour les __membres__ bgs ^^ : https://docs.google.com/document/d/1a6_a8bAiUe1bhgOhkGYhBvIx0LsP5DOhBvjCZnjxe-k/edit?usp=sharing");
         }
     }
-
       
     Client.user.setPresence({ activity: {name: "~help", type: "STREAMING", url: "https://www.twitch.tv/drazzuuu"}
-      
-  
      })
-    
     
 }); 
 
